@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#09090b" />
+    <title>Социальная сеть</title>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </svg>
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#profile" class="nav-item active" data-page="Моя страница">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" />
+          </svg>
+          <span>Моя страница</span>
+        </a>
+
+        <a href="#chats" class="nav-item" data-page="Чаты">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z" />
+          </svg>
+          <span>Чаты</span>
+          <span class="chat-count">28</span>
+        </a>
+      </nav>
+
+      <label class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-4-4" />
+        </svg>
+        <span class="sr-only">Поиск подписчиков</span>
+        <input id="subscriber-search" type="search" placeholder="Поиск" autocomplete="off" />
+      </label>
+
+      <section class="subscribers" aria-labelledby="subscribers-title">
+        <h2 id="subscribers-title">Подписчики</h2>
+        <div class="subscriber-list" id="subscriber-list">
+          <button class="subscriber" type="button" data-name="Сара Коннор">
+            <span class="avatar avatar-pink">СК</span>
+            <span class="subscriber-name">Сара Коннор</span>
+            <span class="status-dot" title="В сети"></span>
+          </button>
+          <button class="subscriber" type="button" data-name="Кристина Локен">
+            <span class="avatar avatar-blue">КЛ</span>
+            <span class="subscriber-name">Кристина Локен</span>
+          </button>
+          <button class="subscriber" type="button" data-name="Майкл Уинслоу">
+            <span class="avatar avatar-yellow">МУ</span>
+            <span class="subscriber-name">Майкл Уинслоу</span>
+          </button>
+        </div>
+        <p class="empty-search" id="empty-search" hidden>Никого не найдено</p>
+        <button class="all-subscribers" id="all-subscribers" type="button">
+          Все подписчики
+        </button>
+      </section>
+
+      <button class="profile" type="button" aria-label="Открыть профиль">
+        <span class="avatar avatar-profile">RG</span>
+        <span>ryan.gosling</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="5" cy="12" r="1" />
+          <circle cx="12" cy="12" r="1" />
+          <circle cx="19" cy="12" r="1" />
+        </svg>
+      </button>
+    </aside>
+
+    <main class="main-content">
+      <h1 id="page-title">Моя страница</h1>
+    </main>
+
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
